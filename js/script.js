@@ -45,6 +45,9 @@ createApp({
             else {
                 task.done = true;
             }
+        },
+        deleteTask(index){
+            this.todo.splice(index, 1)
         }
     },
 }).mount('#app')

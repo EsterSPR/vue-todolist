@@ -15,8 +15,11 @@
                 <div class="col-5">
                     <ul id="unstyled-list">
                         <li v-for="(list, index) in todo" v-bind:class="(list.done == true) ? 'sbarrato' : ''" class="d-flex justify-content-between">
-                            <p>{{ index+1 }} {{ list.text }}</p>
-                            <button class="btn btn-success bt-sm" @click="checkTask(index)">Done</button>
+                            <p>{{ index+1 }}. {{ list.text }}</p>
+                            <span>
+                                <button class="btn btn-success bt-sm mx-1" @click="checkTask(index)">Done</button>
+                                <button class="btn btn-danger bt-sm" @click="deleteTask(index)">X</button>
+                            </span>
                         </li>
                     </ul>
                 </div>
